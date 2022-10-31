@@ -29,7 +29,7 @@ export default {
             validator(value) {
                 // The value must match one of these strings
                 return ['text', 'color', 'date', 'email', 'datetime-local', 'month', 'number', 'url', 'search', 'tel'].includes(value)
-            }
+            },
         },
 
         error: {

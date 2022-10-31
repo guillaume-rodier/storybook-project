@@ -3,7 +3,8 @@
     <h1>This is an about page</h1>
     <StbkBtn
       label="test"
-      :error="true"
+      size="medium"
+      :error="errorBtn"
       @click="clickedBtn"
     />
   </div>
@@ -23,9 +24,15 @@ export default {
     StbkBtn,
   },
 
+  data() {
+    return {
+      errorBtn: false,
+    };
+  },
+
   methods: {
     clickedBtn() {
-      console.log("btnClicked received by parent");
+      this.errorBtn = !this.errorBtn;
     },
   },
 };
